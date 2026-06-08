@@ -15,9 +15,9 @@
     --navy-deep: #002855;
     --navy-mid: #003d7a;
     --navy-light: #0077c8;
-    --text-dark: #1a2332;
-    --text-label: #5a6170;
-    --text-muted: #8a919e;
+    --text-dark: #000000;
+    --text-label: #334155;
+    --text-muted: #475569;
     --white: #ffffff;
     --shadow-input: inset 2px 2px 5px rgba(163, 177, 198, 0.3),
         inset -2px -2px 5px rgba(255, 255, 255, 0.5);
@@ -219,7 +219,8 @@ body {
 
 /* Fixed / Readonly input */
 .input-wrapper.fixed {
-    opacity: 0.55;
+    opacity: 0.85;
+    background: rgba(0, 0, 0, 0.05);
 }
 
 .input-wrapper.fixed input {
