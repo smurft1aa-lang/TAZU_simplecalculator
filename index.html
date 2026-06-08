@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="TAZU Fee Calculator - Calculate the remaining fee to be covered after TAZU scholarship for UTP students.">
+    <title>TAZU Fee Calculator | UTP</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Dot Grid Background Canvas -->
+    <canvas id="dot-canvas"></canvas>
+
+    <div class="app-wrapper">
+        <div class="calculator-card">
+            <div class="card-header">
+                <h1>TAZU Fee Calculator</h1>
+                <!-- Batch Selector Tabs -->
+                <div class="tab-bar">
+                    <button class="tab active" data-batch="2023" id="btn-2023">2023</button>
+                    <button class="tab" data-batch="after2023" id="btn-after2023">&gt;2023</button>
+                    <div class="tab-indicator" id="tab-indicator"></div>
+                </div>
+            </div>
+
+            <div class="fields-row">
+                <!-- Fee Covered by TAZU -->
+                <div class="field">
+                    <label for="var1">Fee Covered by TAZU (refer offer letter)</label>
+                    <div class="input-wrapper">
+                        <span class="currency">RM</span>
+                        <input type="number" id="var1" placeholder="0" min="0" step="0.01"
+                            aria-label="Fee covered by TAZU based on offer letter">
+                    </div>
+                </div>
+
+                <div class="operator">
+                    <span class="operator-symbol">&minus;</span>
+                </div>
+
+                <!-- Total Programme Fee -->
+                <div class="field">
+                    <label for="var2">Total Programme Fee</label>
+                    <div class="input-wrapper fixed">
+                        <span class="currency">RM</span>
+                        <input type="text" id="var2" readonly aria-label="Total fixed programme fee">
+                    </div>
+                </div>
+
+                <div class="operator">
+                    <span class="operator-symbol">=</span>
+                </div>
+
+                <!-- Result -->
+                <div class="field result-field">
+                    <label>Remaining Balance Needed</label>
+                    <div class="result-display" id="result">
+                        <span class="currency">RM</span>
+                        <span class="result-value" id="result-value">0.00</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Calculate Button -->
+            <button class="calculate-btn" id="calculate-btn">CALCULATE</button>
+        </div>
+
+        <p class="footer-note">For UTP student reference only</p>
+    </div>
+
+    <script src="dotgrid.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
