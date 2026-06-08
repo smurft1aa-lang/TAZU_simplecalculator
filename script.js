@@ -13,7 +13,6 @@
     const resultDisplay = document.getElementById("result");
     const tabs = document.querySelectorAll(".tab");
     const indicator = document.getElementById("tab-indicator");
-    const calculateBtn = document.getElementById("calculate-btn");
 
     let currentBatch = "2023";
 
@@ -68,13 +67,6 @@
 
             setFee(currentBatch);
         });
-    });
-
-    // Calculate button flash effect
-    calculateBtn.addEventListener("click", () => {
-        calculate();
-        calculateBtn.classList.add("flash");
-        setTimeout(() => calculateBtn.classList.remove("flash"), 400);
     });
 
     // Initialize fee display only (result stays 0)
